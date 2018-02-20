@@ -20,12 +20,30 @@ class BusinessCell: UITableViewCell {
     var business: Business! {
         didSet {
             nameLabel.text = business.name
+            thumbImageView.setImageWith(business.imageURL!)
+            categoriesLabel.text = business.categories
+            addressLabel.text = business.address
+            reviewLabel.text = "\(business.reviewCount!) Reviews"
+            ratingsLabel.setImageWith(business.ratingImageURL!)
+            distanceLabel.text = business.distance
+            
         }
     }
     
+    //once the cell gets instantiated
     override func awakeFromNib() {
         super.awakeFromNib()
+        thumbImageView.layer.cornerRadius = 3
+        thumbImageView.clipsToBounds = true
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
         // Initialization code
+    }
+    
+    //whenever parent changes dimension aka portrait to landscape view on phone
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

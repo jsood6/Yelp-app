@@ -26,6 +26,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         let searchBar = UISearchBar()
         searchBar.delegate = self
+        searchBar.placeholder = "Search"
         searchBar.sizeToFit()
         
         navigationItem.titleView = searchBar
@@ -57,6 +58,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
          */
         
     }
+    
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         Business.searchWithTerm(term: searchText, completion: { (businesses: [Business]!, error: Error!) -> Void in

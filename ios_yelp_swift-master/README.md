@@ -1,3 +1,9 @@
+# Project 3 - Yelp-app
+
+Yelp-app is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
+
+Time spent: 1.5 hours spent in total
+
 The following **required** functionality is completed:
 
 - [x] Table rows for search results should be dynamic height according to the content height. (3pt)
@@ -24,6 +30,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='https://imgur.com/a/BbuAd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+**video too long, gif is in this repo attached in another file!
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
